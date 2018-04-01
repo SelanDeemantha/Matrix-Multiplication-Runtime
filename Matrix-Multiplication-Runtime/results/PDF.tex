@@ -1,0 +1,127 @@
+\documentclass[12pt,oneside,a4paper]{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\font\titlefont=cmr12 at 40pt
+
+\title{\titlefont{Matrix Multiplication Runtime}}
+
+\author{S.P.S Deemantha (CST140007)}
+\begin{document}
+
+	\maketitle
+
+
+	\newpage
+
+	\tableofcontents
+
+	\newpage
+
+	\section{CPU Programe Runtime}
+
+	\par
+	This program is executed in normal CPU and $x,y$ values are extracted from the average runtime of each different matrix sizes.The   Graph has been ploted according to matrixb size and avarage run time.
+	\hfill \break
+
+	\begin{tikzpicture}
+		\begin{axis}[xlabel=Matrix size,ylabel=Runtime(secs.),legend style={at={(0.35,-0.25)},anchor=west}]
+			\addplot[color=red,mark=x] table[ignore chars={(,)},col sep=comma] {r1.dat};
+			\addlegendentry{$CPU$}
+		\end{axis}
+	\end{tikzpicture}
+
+	\newpage
+
+
+	\section{GPU Program Runtime Using Global Memory}
+
+	\par
+	This program is executed in NVIDIA GPU and $x,y$ values are extracted from the average runtime of each different matrix sizes.The   Graph has been ploted according to matrix size and average run time.But here Global Memory is used to run the Programe.
+	\hfill \break
+
+	\begin{tikzpicture}
+		\begin{axis}[xlabel=Matrix size,ylabel=Runtime(secs.), legend style={at={(0.5,-0.1)},anchor=north}]
+			\addplot[color=green,mark=x] table[ignore chars={(,)},col sep=comma] {r2.dat};
+			\addlegendentry{$GPU (Global)$}
+		\end{axis}
+	\end{tikzpicture}
+
+
+
+	\newpage
+
+	\section{GPU Program Runtime Using Shared Memory}
+
+	\par
+	This program is executed in Nvidia GPU(Shared memory) and $x,y$ values are extracted from the average runtime of each different matrix sizes.The Graph has been ploted according to matrix size and average run time.But here Shared Memory is used to run the Programe.
+	\hfill \break
+
+	\begin{tikzpicture}
+		\begin{axis}[xlabel=Matrix size,ylabel=Runtime(secs.),legend style={at={(0.5,-0.1)},anchor=north}]
+			\addplot[color=blue,mark=x] table[ignore chars={(,)},col sep=comma] {r3.dat};
+			\addlegendentry{$GPU (Shared)$}
+		\end{axis}
+	\end{tikzpicture}
+
+
+
+
+	\newpage
+
+	\section{GPU Program Runtime Using Global Memory By Changing Block Size}
+
+	\par
+	This program is executed in Nvidia GPU(Shared memory) and $x,y$ values are extracted from the average runtime of each different matrix sizes.The Graph has been ploted according to matrix size and average run time.But here Global Memory is used to run the Programe and Matrix Size is fixed.
+	\hfill \break
+
+	\begin{tikzpicture}
+		\begin{axis}[xlabel=Matrix size,ylabel=Runtime(secs.),legend style={at={(0.5,-0.1)},anchor=north}]
+			\addplot[color=blue,mark=x] table[ignore chars={(,)},col sep=comma] {r4.dat};
+			\addlegendentry{$GPU (Shared)$}
+		\end{axis}
+	\end{tikzpicture}
+
+
+
+
+
+
+	\newpage
+
+	\section{Comparison And Conclusion}
+
+	\par
+	Here Three Graphs are Compared which are mentioned above and all the graphs are ploted accordnig to matrix size and avarage run time.As the conclusion, avarage time which is needed to run a program in a GPU using Shared or Global Memory are less then CPU.
+	\hfill \break
+
+	\begin{tikzpicture}
+		\begin{axis}[xlabel=Matrix size,ylabel=Runtime(secs.),legend style={at={(0.5,-0.1)},anchor=north}]
+			\addplot[color=red,mark=x] table[ignore chars={(,)},col sep=comma] {r1.dat};
+			\addlegendentry{$CPU$}
+			\addplot[color=green,mark=x] table[ignore chars={(,)},col sep=comma] {r2.dat};
+			\addlegendentry{$GPU (Global)$}
+			\addplot[color=blue,mark=x] table[ignore chars={(,)},col sep=comma] {r3.dat};
+			\addlegendentry{$GPU (Shared)$}
+		\end{axis}
+	\end{tikzpicture}
+
+	\newpage
+
+	\section{References}
+
+	\begin{itemize}
+	  \item https://gist.github.com/LeCoupa/122b12050f5fb267e75f
+	  \item https://tex.stackexchange.com/questions
+          \item https://stackoverflow.com
+          \item https://www.quantstart.com/articles/Matrix-Matrix-Multiplication-on-the-GPU-with-Nvidia-CUDA
+          \item https://www.sharelatex.com
+          \item http://www.techdarting.com/2014/03/matrix-multiplication-in-cuda-using.html
+
+	\end{itemize}
+
+\end{document}
+
+
+\grid
+

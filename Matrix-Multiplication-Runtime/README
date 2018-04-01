@@ -1,0 +1,5 @@
+First Go To The Folder Location and Run the file "enter.sh"  using  command --------->  ./enter.sh
+Then At the End Automatically Will Run the final.sh
+Then You Can See the output in the "results" folder  named "PDF.pdf"
+If PDF didn't Make Properly. Go to folder "results" and Open the Terminal There, and Type command ---------> pdflatex PDF.tex 
+NOTE: The Machine Which Is Used To Run The Program Should Have Latex and Cuda Programing Compatibility.

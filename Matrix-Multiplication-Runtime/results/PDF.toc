@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}CPU Programe Runtime}{3}
+\contentsline {section}{\numberline {2}GPU Program Runtime Using Global Memory}{4}
+\contentsline {section}{\numberline {3}GPU Program Runtime Using Shared Memory}{5}
+\contentsline {section}{\numberline {4}GPU Program Runtime Using Global Memory By Changing Block Size}{6}
+\contentsline {section}{\numberline {5}Comparison And Conclusion}{7}
+\contentsline {section}{\numberline {6}References}{8}
